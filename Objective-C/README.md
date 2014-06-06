@@ -1,24 +1,7 @@
-![header](resources/header.png)
+ALPValidator: Objective-C
+===
 
-ALPValidator provides drop in user input validation for your iOS apps. It features a number of built in validation rules, some convenience methods to verify user input, a validation state change handler block, a public error messages collection, and a category on UIControl to provide validate-as-input functionality. It's not opinionated, it's your app and it's up to you how you want handle validation errors on the UI. 
-
-Built in validations:
-
-- Presence validation
-- Minimum length validation
-- Maximum length validation 
-- Range validation (string character length and numeric)
-- Equality validation (for password confirmation and such)
-- Regular expression match validation
-- Email address validation
-- Custom block validation
-- Remote validation (remote web service validation)
-- Ensure string contains at least one digit
-- *More to come as encountered!*
-
-![demo-vid](resources/demo.mp4.gif)
-
-*Note: the UI shown in the demo is nothing to do with the library, it's just some of the functionality on display.*
+Objective-C implementation of [ALPValidator](https://github.com/adamwaite/ALPValidator).
 
 ## Installation
 
@@ -211,7 +194,7 @@ See the example project which uses the UIControl category to validate as you typ
 
 ### Remote Validation
 
-As with the [jQuery Validation](https://github.com/jzaefferer/jquery-validation) plug-in, ALPValidator supports remote validations. You can add a remote validation rule to a validator instance to ensure that a server-side condition is satisfied. This may for example be a condition that no two users can sign up to your service with the same username. 
+As with the [jQuery Validation](https://github.com/jzaefferer/jquery-validation) plug-in, ALPValidator supports remote validations. You can add a remote validation rule to a validator instance to ensure that a server-side condition is satisfied. This may for example be a condition that no two users can sign up to your service with the same username.
 
 Typically you might make a request to your registration service after a full sign up form has been populated and a button has been tapped. You would only then notify the user that their chosen username has been taken once the service has returned containing the error in a JSON response or suchlike. This experience is improved if these requests are made asynchronously as the user types and the UI is updated to tell the user in closer to real-time.
 
@@ -244,30 +227,6 @@ The remote validation request comes in the form of a HTTP POST request with an `
 
 An Xcode project has been included in this repository containing an example for each validation rule and some other features. To test the remote validation start the [Sinatra](http://www.sinatrarb.com) server with the `ruby demo_server.rb` command.
 
-## Roadmap
-
-- File type validator (max size on images etc)
-- Phone number validation
-- Credit card validation
-- Postal code validation
-- Input exists in a collection validation (for select type inputs)
-
 ## Contributing
 
 Contributions welcome. Before making a pull request please ensure all of the [Kiwi](https://github.com/allending/Kiwi) specs pass if you're changing existing code, or you back new features up with new specs. Please also update the README with any new features. Thanks.
-
-## Contact
-
-[@adamwaite](http://twitter.com/adamwaite)
-
-## Thanks
-
-ALPValidator is inspired by the [jQuery Validation](https://github.com/jzaefferer/jquery-validation) plug-in, thanks.
-
-##License
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
- 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
- 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

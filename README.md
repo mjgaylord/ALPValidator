@@ -1,7 +1,33 @@
 ![header](resources/header.png)
 
-Objective-C implementation: 
-Swift implementation: 
+ALPValidator provides drop in user input validation for your iOS apps. 
+
+It's written in [Objective-C](), and in [Swift]().
+
+Features: 
+
+- Numerous built in validation rules
+- Convenience methods to verify user input
+- State change handling mechanism
+- Error messages collection and handling
+- Category on UIControl to provide validate-as-input functionality. 
+- It's not opinionated, it's your app and it's up to you how you want handle validation errors on the UI level. 
+
+Built in validations:
+
+- Presence validation
+- Minimum length validation
+- Maximum length validation 
+- Range validation (string character length and numeric)
+- Equality validation (for password confirmation and such)
+- Regular expression match validation
+- Email address validation
+- Custom block validation
+- Remote validation (remote web service validation)
+- Ensure string contains at least one digit
+- *More to come as encountered!*
+
+![demo-vid](resources/demo.mp4.gif)
 
 ## Contact
 

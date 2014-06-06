@@ -1,4 +1,6 @@
-ALPValidator
+ALPValidator: Swift
 ===
 
-Swift implementation underway.
+Swift implementation of [ALPValidator](https://github.com/adamwaite/ALPValidator).
+
+**Swift implementation underway.**
