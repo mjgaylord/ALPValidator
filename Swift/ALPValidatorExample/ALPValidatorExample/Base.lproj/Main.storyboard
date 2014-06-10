@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6162" systemVersion="14A238h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cO3-Th-DBs">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6160"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--View Controller - Swift!-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="ALPValidatorExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +15,85 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="aHd-lD-UYm">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="PGh-3c-sxd">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PGh-3c-sxd" id="6MS-sE-Xn7">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="7Xx-uT-D3C" id="z26-Ky-QnN"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="aHd-lD-UYm" secondAttribute="bottom" id="Xgg-gW-kQZ"/>
+                            <constraint firstAttribute="trailing" secondItem="aHd-lD-UYm" secondAttribute="trailing" id="gt4-2v-ev2"/>
+                            <constraint firstItem="aHd-lD-UYm" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="hvS-Ka-JB8"/>
+                            <constraint firstItem="aHd-lD-UYm" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="kra-Q7-u99"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="aHd-lD-UYm"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Xgg-gW-kQZ"/>
+                                <exclude reference="gt4-2v-ev2"/>
+                                <exclude reference="hvS-Ka-JB8"/>
+                                <exclude reference="kra-Q7-u99"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="aHd-lD-UYm"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Xgg-gW-kQZ"/>
+                                <include reference="gt4-2v-ev2"/>
+                                <include reference="hvS-Ka-JB8"/>
+                                <include reference="kra-Q7-u99"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Swift!" id="Q1C-qU-KY4"/>
+                    <connections>
+                        <outlet property="tableView" destination="aHd-lD-UYm" id="h6E-Tl-ywc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <customObject id="7Xx-uT-D3C" customClass="TableViewDataSource" customModule="ALPValidatorExample" customModuleProvider="target">
+                    <connections>
+                        <outlet property="tableView" destination="aHd-lD-UYm" id="jLI-CS-JCm"/>
+                    </connections>
+                </customObject>
             </objects>
+            <point key="canvasLocation" x="807" y="-394.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="i1d-wc-ZB2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cO3-Th-DBs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZHe-O0-N0p">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="j1o-Xs-Tsg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yeU-2G-Ht4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="147" y="-394.5"/>
         </scene>
     </scenes>
 </document>
