@@ -1,44 +1,22 @@
 //
-//  ViewController.swift
+//  TableViewDataSource.swift
 //  ALPValidatorExample
 //
-//  Created by Adam Waite on 06/06/2014.
+//  Created by Adam Waite on 11/06/2014.
 //  Copyright (c) 2014 adamjwaite. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
-    
-    @IBOutlet var tableView: UITableView
-    @IBOutlet var tableViewDataSource: TableViewDataSource
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-}
-
 class TableViewDataSource: NSObject, UITableViewDataSource {
     
     @IBOutlet var tableView: UITableView
     
-    struct CellData {
-        
-        var title: String
-        var image: UIImage?
-        
-        init (title: String) {
-            self.title = title
-        }
-        
-    }
-    
-    let cellDataCollection: CellData[] = [
-        CellData(title: "Hello"),
-        CellData(title: "Swift"),
+    let cellDataCollection: ALPValidatorDemoScene[] = [
+        ALPValidatorDemoScene(title: "Hello"),
+        ALPValidatorDemoScene(title: "Swift"),
     ]
-        
+    
     func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
         return 1;
     }
