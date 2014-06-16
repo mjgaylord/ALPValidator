@@ -10,8 +10,17 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet var detailLabel: UILabel
+    @IBOutlet var textField: UITextField
+    @IBOutlet var validationsLabel: UILabel
+    
+    var scene: ALPValidatorDemoScene?
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController.navigationBarHidden = false
+        title = scene!.title
+        detailLabel.text = scene!.detail
     }
     
 }

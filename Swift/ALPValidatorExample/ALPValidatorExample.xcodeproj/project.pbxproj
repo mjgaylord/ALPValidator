@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		991043BE194F1F430041657A /* ALPValidatorDemoScenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991043BD194F1F430041657A /* ALPValidatorDemoScenes.swift */; };
+		991043C1194F28EB0041657A /* UIColor+ALPValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991043C0194F28EB0041657A /* UIColor+ALPValidator.swift */; };
 		99ACAF4719489142008B977E /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ACAF4619489142008B977E /* TableViewDataSource.swift */; };
 		99ACAF491948926F008B977E /* ALPValidatorDemoScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ACAF481948926F008B977E /* ALPValidatorDemoScene.swift */; };
 		99ACAF4B194893A6008B977E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ACAF4A194893A6008B977E /* DetailViewController.swift */; };
@@ -28,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		991043BD194F1F430041657A /* ALPValidatorDemoScenes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALPValidatorDemoScenes.swift; sourceTree = "<group>"; };
+		991043C0194F28EB0041657A /* UIColor+ALPValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ALPValidator.swift"; sourceTree = "<group>"; };
 		99ACAF4619489142008B977E /* TableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		99ACAF481948926F008B977E /* ALPValidatorDemoScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALPValidatorDemoScene.swift; sourceTree = "<group>"; };
 		99ACAF4A194893A6008B977E /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +64,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		991043BF194F28D70041657A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				991043C0194F28EB0041657A /* UIColor+ALPValidator.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		99ACAF4E1948952A008B977E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +101,7 @@
 		99ACAF5119489548008B977E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				991043BD194F1F430041657A /* ALPValidatorDemoScenes.swift */,
 				99ACAF481948926F008B977E /* ALPValidatorDemoScene.swift */,
 			);
 			name = Model;
@@ -117,6 +130,7 @@
 			children = (
 				99BF27841941E0CC0074B80F /* AppDelegate.swift */,
 				99BF27881941E0CC0074B80F /* Main.storyboard */,
+				991043BF194F28D70041657A /* Extensions */,
 				99ACAF5119489548008B977E /* Model */,
 				99ACAF4E1948952A008B977E /* Controllers */,
 				99BF278B1941E0CC0074B80F /* Images.xcassets */,
@@ -253,6 +267,8 @@
 				99BF27871941E0CC0074B80F /* ListViewController.swift in Sources */,
 				99ACAF4B194893A6008B977E /* DetailViewController.swift in Sources */,
 				99BF27851941E0CC0074B80F /* AppDelegate.swift in Sources */,
+				991043BE194F1F430041657A /* ALPValidatorDemoScenes.swift in Sources */,
+				991043C1194F28EB0041657A /* UIColor+ALPValidator.swift in Sources */,
 				99ACAF491948926F008B977E /* ALPValidatorDemoScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

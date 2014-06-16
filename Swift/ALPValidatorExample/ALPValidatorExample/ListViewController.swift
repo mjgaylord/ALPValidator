@@ -8,13 +8,25 @@
 
 import UIKit
 
-class ListViewController: UIViewController {
+class ListViewController: UIViewController, UITableViewDelegate {
     
-    var scene: ALPValidatorDemoScene?
+    @IBOutlet var tableView: UITableView
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         navigationController.navigationBarHidden = true
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+        var detail = segue.destinationViewController as DetailViewController
+        var index: Int? = tableView.indexPathForSelectedRow().row
+        if let selected = index {
+            detail.scene = ALPValidatorDemoScenes().scenes[selected]
+        }
+    }
+    
+    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+
 }

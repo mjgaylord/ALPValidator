@@ -11,9 +11,11 @@ import UIKit
 struct ALPValidatorDemoScene {
     
     var title: String
+    var detail: String
     
-    init (title: String) {
+    init (title: String, detail:String) {
         self.title = title
+        self.detail = detail
     }
     
 }

@@ -12,10 +12,7 @@ class TableViewDataSource: NSObject, UITableViewDataSource {
     
     @IBOutlet var tableView: UITableView
     
-    let cellDataCollection: ALPValidatorDemoScene[] = [
-        ALPValidatorDemoScene(title: "Hello"),
-        ALPValidatorDemoScene(title: "Swift"),
-    ]
+    let cellDataCollection: ALPValidatorDemoScene[] = ALPValidatorDemoScenes().scenes
     
     func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
         return 1;
